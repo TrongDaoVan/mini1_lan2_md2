@@ -1,37 +1,37 @@
 package demo;
 
-public class Staff {
-    private String employeeCode;
-    private String name;
+public abstract class Employee {
+    private String id;
+    private String fullName;
     private int age;
     private String phone;
     private String email;
 
-    public Staff() {
+    public Employee() {
     }
 
-    public Staff(String employeeCode, String name, int age, String phone, String email) {
-        this.employeeCode = employeeCode;
-        this.name = name;
+    public Employee(String id, String fullName, int age, String phone, String email) {
+        this.id = id;
+        this.fullName = fullName;
         this.age = age;
         this.phone = phone;
         this.email = email;
     }
 
-    public String getEmployeeCode() {
-        return employeeCode;
+    public String getId() {
+        return id;
     }
 
-    public void setEmployeeCode(String employeeCode) {
-        this.employeeCode = employeeCode;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public int getAge() {
@@ -57,4 +57,6 @@ public class Staff {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public abstract float getSumSalary();
 }
